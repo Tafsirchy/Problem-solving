@@ -1,10 +1,3 @@
-const readline = require("readline");
-
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
 function checkPalindrome(str) {
   str = str.toLowerCase();
   const reversed = str.split("").reverse().join("");
@@ -16,8 +9,7 @@ function checkPalindrome(str) {
   }
 }
 
-rl.question("Enter a string: ", (userInput) => {
-  const isPalindrome = checkPalindrome(userInput);
-  console.log(`Is the string a palindrome? ${isPalindrome}`);
-  rl.close();
-});
+console.log(checkPalindrome("madam"));
+console.log(checkPalindrome("hello"));
+
+

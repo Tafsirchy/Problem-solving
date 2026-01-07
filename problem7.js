@@ -1,10 +1,3 @@
-const readline = require('readline');
-
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-}); 
-
 function findevenNumbers(arr) {
     let evenNumbers = [];
     for (let num of arr) {
@@ -15,9 +8,4 @@ function findevenNumbers(arr) {
     return evenNumbers;
 }
 
-rl.question('Enter an array of numbers separated by commas: ', (input) => {
-    const arr = input.split(',').map(Number);
-    const evenNumbers = findevenNumbers(arr);
-    console.log('Even numbers in the array:', evenNumbers);
-    rl.close();
-})
+console.log(findevenNumbers([1, 2, 3, 4, 5, 6])); 

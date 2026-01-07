@@ -1,22 +1,14 @@
-const readline = require('readline');
+function countVowels(input) {
+  let count = 0;
+  const vowels = "aeiouAEIOU";
 
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-})
+  for (let i = 0; i < input.length; i++) {
 
-function checkvowel(char) {
-    const vowels = 'aeiouAEIOU';
-    return vowels.includes(char);   
+    if (vowels.includes(input[i])) {
+      count++;
+    }
+  }
+  return count;
 }
 
-rl.question('Enter a string: ', (userInput) => {
-    let count = 0;
-    for (let i = 0; i < userInput.length; i++) {
-      if (checkvowel(userInput[i])) {
-        count++;
-      }
-    }
-    console.log(`Number of vowels in the string: ${count}`);
-    rl.close();
-})
+console.log(countVowels("programming"));
