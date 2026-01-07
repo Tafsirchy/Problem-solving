@@ -10,12 +10,12 @@ function checkvowel(char) {
     return vowels.includes(char);   
 }
 
-rl.question('Enter a string: ', (answer) => {
+rl.question('Enter a string: ', (userInput) => {
     let count = 0;
-    for (let i = 0; i < answer.length; i++) {
-        if (checkvowel(answer[i])) {
-            count++;
-        }
+    for (let i = 0; i < userInput.length; i++) {
+      if (checkvowel(userInput[i])) {
+        count++;
+      }
     }
     console.log(`Number of vowels in the string: ${count}`);
     rl.close();
