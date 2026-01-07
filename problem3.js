@@ -12,7 +12,7 @@ function checkPalindrome(str) {
   if (str === reversed) {
     return true;
   } else {
-    return false;
+    return falsee;
   }
 }
 
