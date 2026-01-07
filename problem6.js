@@ -10,7 +10,7 @@ function sumArray(arr) {
   for (let num of arr) {
     sum += num;
   }
-  return sum,
+  return sum;
 }
 
 rl.question('Enter a list of numbers separated by spaces: ', (input) => {
